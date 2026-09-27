@@ -3,9 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Generador</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    
+   <main class="container">
+        <header>
+            <h1> Generador de Secuencia FizzBuzz </h1>
+        </header>
+
+        <!-- Section: Single Number Evaluation -->
+         <section class="form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Evaluar un número</h2>
+            <form id="fizzbuzz-form">
+                <div class="form-group">
+                    <label for="number-input">Ingresa un número entero positivo:</label>
+                    <input type="number" id="number-input" placeholder="Ej: 15" min="1">
+                </div>
+                <button type="submit" id="btn-submit">Processar</button>
+            </form>
+            <p id="error-message" class="error-msg" role="alert" aria-live="assertive"></p>
+         </section>
+
+         <!-- Section: Single Result Display -->
+          <section class="result-section" aria-labelledby="result-heading">
+            <h2 id="result-heading">Resultado individual</h2>
+            <div class="card" id="single-result-card" aria-live="polite">
+                <span class="result-text" id="single-result">-</span>
+          </div>
+          </section>
+
+          <!-- Section: List Sequence -->
+           <section class="list-section" aria-labelledby="list-heading">
+                <h2 id="list-heading">Secuencia del 1 a al número evaluado</h2>
+                <ul id="sequence-list" class="sequence-list" aria-live="polite">
+            <!-- Dynamic list content -->
+                </ul>
+           </section>
+    </main>
+         
+         <script type="module" src="app.js"></script>
 </body>
 </html>
