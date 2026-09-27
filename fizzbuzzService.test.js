@@ -1,41 +1,41 @@
-import { getFizzBussValue, generateFizzBuzzSequence, validateInput } from './fizzbuzzService.js';
+import { getFizzBuzzValue, generateFizzBuzzSequence, validateInput } from './fizzbuzzService.js';
 
 describe('Pruebas unitarias del servicio FizzBuzz (TDD)', () => {
     describe('validateInput()', () => {
        test('debe rechazar entradas vacías o nulas', () => {
         const result = validateInput('');
         expect(result.isValid).toBe(false);
-        expect(result.errorMensage).toBe('por favor ingressa un numero valido' )
+        expect(result.errorMessage).toBe('Por favor, ingresa un número válido' )
 
     });
 test('debe rechazar números menores o iguales a cero', () => {
     const result = validateInput (0);
-    expect(result.isvalid).toBe(false);
-    expect(result.errorMensage).toBe('El numero debe ser mayor a 0')
+    expect(result.isValid).toBe(false);
+    expect(result.errorMessage).toBe('El número debe ser mayor a 0')
 });
 test('debe aceptar números interos positivos', () => {
     const result = validateInput(15);
     expect(result.isValid).toBe(true);
-    expect(result.errorMensage).toBe(''); 
+    expect(result.errorMessage).toBe(''); 
     });
 });
 
 describe('getFizzBussValue()', () => {
     test('debe retornar "fizzBuzz" para múltiplos de 3 y 5', () => {
-        expect(getFizzBussValue(15)).toBe('FizBuzz');
-        expect(getFizzBussValue(30)).toBe('FizBuzz');
+        expect(getFizzBuzzValue(15)).toBe('FizzBuzz');
+        expect(getFizzBuzzValue(30)).toBe('FizzBuzz');
 });
 test('debe retornar "Fizz" solo para múltiplos de 3', () => {
-    expect(getFizzBussValue(3)).toBe(Fizz);
-    expect(getFizzBussValue(9)).toBe(Fizz);
+    expect(getFizzBuzzValue(3)).toBe('Fizz');
+    expect(getFizzBuzzValue(9)).toBe('Fizz');
 });
 test('debe retornar "Buzz" solo para múltiplos de 5', () => {
-    expect(getFizzBussValue(5)).toBe(Buzz);
-    expect(getFizzBussValue(10)).toBe(Buzz);
+    expect(getFizzBuzzValue(5)).toBe('Buzz');
+    expect(getFizzBuzzValue(10)).toBe('Buzz');
 });
 test('debe retornar el número como string cuando no es multiplo de 3 ni de 5', () => {
-    expect(getFizzBussValue(7)).toBe('2');
-    expect(getFizzBussValue(2)).toBe('7');
+    expect(getFizzBuzzValue(7)).toBe('7');
+    expect(getFizzBuzzValue(2)).toBe('2');
     });
  });
  describe('generateFizzBuzzSequence()', () => {
