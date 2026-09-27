@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Generador</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
 <body>
    <main class="container">
@@ -25,7 +26,22 @@
          </section>
 
          <!-- Section: Single Result Display -->
+          <section class="result-section" aria-labelledby="result-heading">
+            <h2 id="result-heading">Resultado individual</h2>
+            <div class="card" id="single-result-card" aria-live="polite">
+                <span class="result-text" id="single-result">-</span>
+          </div>
+          </section>
 
-   </main> 
+          <!-- Section: List Sequence -->
+           <section class="list-section" aria-labelledby="list-heading">
+                <h2 id="list-heading">Secuencia del 1 a al número evaluado</h2>
+                <ul id="sequence-list" class="sequence-list" aria-live="polite">
+            <!-- Dynamic list content -->
+                </ul>
+           </section>
+    </main>
+         
+         <script type="module" src="app.js"></script>
 </body>
 </html>
